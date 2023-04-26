@@ -16,3 +16,4 @@ rules:
     resources:
       - 'secrets'
       - 'configmaps'
+      - 'services'
