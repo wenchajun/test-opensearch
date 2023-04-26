@@ -17,3 +17,9 @@ rules:
       - 'secrets'
       - 'configmaps'
       - 'services'
+  - verbs:
+      - '*'
+    apiGroups:
+      - 'apps'
+    resources:
+      - 'statefulsets'
