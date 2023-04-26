@@ -9,9 +9,6 @@ rules:
       - 'extensions.kubesphere.io'
     resources:
       - '*'
- ---
-kind: Role
-rules:
   - verbs:
       - '*'
     apiGroups:
