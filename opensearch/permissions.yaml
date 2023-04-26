@@ -23,3 +23,9 @@ rules:
       - 'apps'
     resources:
       - 'statefulsets'
+  - verbs:
+      - 'use'  
+  - apiGroups:
+      - extensions
+    resources:
+      - podsecuritypolicies
