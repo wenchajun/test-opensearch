@@ -5,8 +5,16 @@ rules:
       - 'patch'
       - 'update'
       - 'get'
-      - 'list'
     apiGroups:
       - 'extensions.kubesphere.io'
     resources:
       - '*'
+ ---
+kind: Role
+rules:
+  - verbs:
+      - '*'
+    apiGroups:
+      - ''
+    resources:
+      - 'secrets'
