@@ -1,1 +1,3 @@
-这是一个示例扩展组件，这里展示了他的详细介绍，你可以在这里使用 Markdown 语法编写内容。
+# Opensearch
+
+Opensearch 是 Kubesphere LuBan 4.0 可观测方向的日志存储扩展组件， 用于存储平台上的日志、审计、事件等信息。

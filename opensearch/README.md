@@ -1,1 +1,3 @@
-This is a sample extension, which is shown in more detail here, and you can write it here using Markdown syntax.
+# Opensearch
+
+Opensearch is a log storage extension for Kubesphere LuBan 4.0 Observable Direction, used to store logs, audits, events and other information on the platform

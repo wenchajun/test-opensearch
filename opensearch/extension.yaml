@@ -1,22 +1,18 @@
 apiVersion: v1
 name: opensearch
-version: 0.1.0
+version: 2.6.0
 displayName:
-  zh: 示例扩展组件
-  en: Sample Extension
+  zh: OpenSearch 日志存储扩展组件
+  en: OpenSearch Log Storage Extensions
 description:
-  zh: 这是一个示例扩展组件，这是它的描述
-  en: This is a sample extension, and this is its description
+  zh: Opensearch 是 Kubesphere LuBan 4.0 可观测方向的日志存储扩展组件， 存储平台上的日志、审计、事件等信息
+  en: Opensearch is a log storage extension for Kubesphere LuBan 4.0 Observable Direction, used to store logs, audits, events and other information on the platform
 keywords:
   - Logging
+  - Observability
 home: https://kubesphere.io
 sources:
   - https://github.com/kubesphere
 kubeVersion: ">=1.19.0"
 ksVersion: ">=3.0.0"
-dependencies:
-  - name: frontend
-    condition: frontend.enabled
-  - name: backend
-    condition: backend.enabled
-icon: ./favicon.svg
+icon: ./opensearch.svg
