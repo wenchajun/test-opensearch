@@ -24,8 +24,8 @@ rules:
     resources:
       - 'statefulsets'
   - verbs:
-      - 'use'  
+      - '*'  
     apiGroups:
-      - extensions
+      - policy
     resources:
-      - podsecuritypolicies
+      - poddisruptionbudgets
