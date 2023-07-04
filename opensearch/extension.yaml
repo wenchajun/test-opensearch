@@ -7,12 +7,24 @@ displayName:
 description:
   zh: Opensearch 是 Kubesphere LuBan 4.0 可观测方向的日志存储扩展组件， 存储平台上的日志、审计、事件等信息
   en: Opensearch is a log storage extension for Kubesphere LuBan 4.0 Observable Direction, used to store logs, audits, events and other information on the platform
+category: logging
 keywords:
   - Logging
   - Observability
 home: https://kubesphere.io
+provider:                   
+  zh:
+    name: "青云科技"
+    email: "support@kubesphere.cloud"
+    url: "https://www.qingcloud.com"
+  en:
+    name: "QingCloud"
+    email: "support@kubesphere.cloud"
+    url: "https://www.qingcloud.com"
+staticFileDirectory: static
 sources:
   - https://github.com/kubesphere
 kubeVersion: ">=1.19.0"
 ksVersion: ">=3.0.0"
-icon: ./opensearch.svg
+staticFileDirectory: static
+icon: ./static/opensearch.svg
