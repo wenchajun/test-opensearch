@@ -16,7 +16,6 @@ rules:
     resources:
       - 'secrets'
       - 'configmaps'
-      - 'namespaces'
       - 'services'
   - verbs:
       - '*'
