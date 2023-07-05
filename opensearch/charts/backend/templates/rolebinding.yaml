@@ -6,6 +6,7 @@ metadata:
   name: {{ $fullName | quote }}
   labels:
     {{- include "opensearch.labels" . | nindent 4 }}
+  namespace: {{ template "opensearch.namespace" . }}
 subjects:
   - kind: ServiceAccount
     {{- if eq .Values.rbac.serviceAccountName "" }}

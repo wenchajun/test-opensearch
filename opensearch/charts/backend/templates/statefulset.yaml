@@ -10,6 +10,7 @@ metadata:
     {{- with .Values.openSearchAnnotations }}
     {{- toYaml . | nindent 4 }}
     {{- end }}
+  namespace: {{ template "opensearch.namespace" . }}
 spec:
   serviceName: {{ template "opensearch.serviceName" . }}-headless
   selector:

@@ -21,6 +21,10 @@ roles:
 
 replicas: 3
 
+## Override the opensearch namespace
+##
+namespaceOverride: kubesphere-logging-system
+
 # if not set, falls back to parsing .Values.imageTag, then .Chart.appVersion.
 majorVersion: ""
 
