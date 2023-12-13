@@ -9,7 +9,6 @@ metadata:
   name: "{{ template "opensearch.uname" . }}-pdb"
   labels:
     {{- include "opensearch.labels" . | nindent 4 }}
-  namespace: {{ template "opensearch.namespace" . }}
 spec:
   maxUnavailable: {{ .Values.maxUnavailable }}
   selector:

@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: {{ include "opensearch.uname" . }}-securityconfig
-  namespace: {{ template "opensearch.namespace" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "opensearch.labels" . | nindent 4 }}
 type: Opaque

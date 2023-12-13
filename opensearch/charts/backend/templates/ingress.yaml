@@ -20,7 +20,6 @@ metadata:
   annotations:
 {{ toYaml . | indent 4 }}
 {{- end }}
-  namespace: {{ template "opensearch.namespace" . }}
 spec:
   {{- if and $ingressSupportsIngressClassName .Values.ingress.ingressClassName }}
   ingressClassName: {{ .Values.ingress.ingressClassName }}

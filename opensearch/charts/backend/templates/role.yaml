@@ -6,7 +6,6 @@ metadata:
   name: {{ $fullName | quote }}
   labels:
     {{- include "opensearch.labels" . | nindent 4 }}
-  namespace: {{ template "opensearch.namespace" . }}
 rules:
   - apiGroups:
       - extensions

@@ -6,7 +6,6 @@ metadata:
   name: {{ template "opensearch.uname" . }}-config
   labels:
     {{- include "opensearch.labels" . | nindent 4 }}
-  namespace: {{ template "opensearch.namespace" . }}
 data:
 {{- range $configName, $configYaml := .Values.config }}
   {{ $configName }}: |

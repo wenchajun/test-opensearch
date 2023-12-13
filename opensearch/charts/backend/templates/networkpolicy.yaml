@@ -5,7 +5,6 @@ metadata:
   name: {{ template "opensearch.uname" . }}-opensearch-net
   labels:
     {{- include "opensearch.labels" . | nindent 4 }}
-  namespace: {{ template "opensearch.namespace" . }}
 spec:
   ingress:
   - from:

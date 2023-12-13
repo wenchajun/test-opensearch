@@ -7,7 +7,6 @@ metadata:
   name: {{ default $fullName .Values.podSecurityPolicy.name | quote }}
   labels:
     {{- include "opensearch.labels" . | nindent 4 }}
-  namespace: {{ template "opensearch.namespace" . }}
 spec:
 {{ toYaml .Values.podSecurityPolicy.spec | indent 2 }}
 {{- if .Values.sysctl.enabled }}
