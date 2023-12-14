@@ -1,0 +1,20 @@
+{{- $root := . }}
+{{- if .Values.data.config }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.data.name }}-config
+  labels:
+    {{- with .Values.data.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+data:
+{{- range $configName, $configYaml := .Values.data.config }}
+  {{ $configName }}: |
+    {{- if (eq (kindOf $configYaml) "map")}}
+    {{-   tpl (toYaml $configYaml) $root | nindent 4 }}
+    {{- else -}}
+    {{-   tpl $configYaml $root | nindent 4 }}
+    {{- end -}}
+{{- end -}}
+{{- end -}}
