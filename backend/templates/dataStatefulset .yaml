@@ -70,7 +70,7 @@ spec:
         {{- end }}
         {{- /* This forces a restart if the configmap has changed */}}
         {{- if .Values.data.config }}
-        configchecksum: {{ include (print .Template.BasePath "/configmap.yaml") . | sha256sum | trunc 63 }}
+        configchecksum: {{ include (print .Template.BasePath "/dataConfigmap.yaml") . | sha256sum | trunc 63 }}
         {{- end }}
         {{- if .Values.data.securityConfig.config.data }}
         securityconfigchecksum: {{ include (print .Template.BasePath "/securityconfig.yaml") . | sha256sum | trunc 63 }}
