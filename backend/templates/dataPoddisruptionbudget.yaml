@@ -6,12 +6,16 @@ apiVersion: policy/v1beta1
 {{- end }}
 kind: PodDisruptionBudget
 metadata:
-  name: "{{ template "opensearch.uname" . }}-pdb"
+  name: "{{ .Values.data.name }}-pdb"
   labels:
-    {{- include "opensearch.labels" . | nindent 4 }}
+  {{- with .Values.data.labels }}
+{{- toYaml . | nindent 4 }}
+    {{- end }}
 spec:
-  maxUnavailable: {{ .Values.maxUnavailable }}
+  maxUnavailable: {{ .Values.data.maxUnavailable }}
   selector:
     matchLabels:
-      {{- include "opensearch.selectorLabels" . | nindent 6 }}
+    {{- with .Values.data.selectorLabels }}
+{{- toYaml . | nindent 6 }}
+    {{- end }}
 {{- end }}
